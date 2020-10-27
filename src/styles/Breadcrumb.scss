@@ -1,0 +1,30 @@
+.breadcrumb {
+    background: linear-gradient(90deg, rgba(245, 197, 24, 0.26) 22.24%, rgba(251, 247, 252, 0) 100%);
+    padding: 20px 100px;
+
+    &-unordered {
+        padding: 10px 16px;
+        list-style: none;
+        background-color: #eee;
+    }
+
+    &__list,
+    &__list-yellow {
+        display: inline;
+        font-size: 18px;
+    }
+
+    &__list {
+        color: #000;
+    }
+
+    &__list-yellow {
+        color: #F5C518;
+    }
+
+    &__list::before {
+    padding: 8px;
+    color: #F5C518;
+    content: "/\00a0";
+    }
+}

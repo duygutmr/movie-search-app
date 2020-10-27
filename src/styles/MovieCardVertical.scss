@@ -1,0 +1,66 @@
+.results {
+    cursor: pointer;
+
+    &__box {
+        display: grid;
+        grid-template-columns: 330px;
+        margin-top: 55px;
+
+        @media only screen and (max-width:415px) {
+            padding: 150px 20px 0 20px;
+            
+        }
+
+    &-image {
+        position: relative;
+       
+    }
+
+    &-poster {
+        border-radius: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    &-icon {
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+        cursor: pointer;
+    }
+    
+
+    &-rate {
+        display: flex;
+        margin-bottom: 36px;
+        margin-top: 23px;
+    }
+
+    &-score {
+        margin-left: 20px;
+    }
+
+    &-date {
+        color: #F5C518;
+    }
+
+    &-plot {
+        margin-top: 20px;
+    }
+
+    .movie__box-right-btn-bio {
+        position: absolute;
+        left: 10px;
+        bottom: 20px;
+        background-color: #F5C518;
+        font-size: 16px;
+        line-height: 24px;
+        border: none;
+        border-radius: 10px;
+        padding: 11px 24px;
+            cursor: pointer;
+    }
+    
+}
+
+}

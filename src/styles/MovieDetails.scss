@@ -1,0 +1,28 @@
+.rating {
+    margin-top: 50px;
+}
+.movie__box-rating{
+    display: grid;
+    grid-template-columns: min-content 2fr;
+    border-radius: 10px;
+
+    @media only screen and (max-width: 768px) { 
+       display: block;
+      }
+}
+h5 {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.movie__box-right-btn-bio {
+    margin-right: 15px;
+
+    @media only screen and (max-width: 768px) { 
+        margin: auto;
+      }
+}
+
+.movie__box-right-btn-bio:focus,
+.movie__box-right-btn-action:focus {
+    outline: none;
+}

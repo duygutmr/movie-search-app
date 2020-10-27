@@ -1,0 +1,98 @@
+.movie__box {
+    display: grid;
+    grid-template-columns: min-content 650px;
+    padding: 44px 22px 50px 44px;
+    background-color:#FAFAFA; 
+    border-radius: 10px;
+
+    &-photo {
+        border-radius: 20px;
+    }
+
+    &-right-btn {
+
+        &-action,
+        &-bio {
+            background-color: #F5C518;
+            font-size: 16px;
+            line-height: 24px;
+            border: none;
+            border-radius: 10px;
+            padding: 11px 24px;
+            cursor: pointer;
+        }
+
+        &-action {
+            margin-right: 15px;
+        }
+
+    }
+
+    &-content {
+        padding: 30px 60px;
+
+        @media only screen and (max-width: 769px) {
+            padding: 10px;
+        }
+    }
+   
+
+    &-imdb {
+        display: flex;
+        align-items: center;
+
+        h3 {
+            align-self: center;
+            margin-left: 19px;
+        }
+    }
+
+    &-btn {
+        display: flex;
+        margin-left: 20px;
+
+        &-fav {
+            padding: 10px 5px;
+            font-size: 16px;
+            background-color: #F5C518;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 14px 26px rgba(39, 13, 48, 0.25);
+
+            span {
+                margin-right: 8px;
+            }
+        }
+        &-add {
+            display: block;
+            margin-left: 50px;
+        }
+
+        &-link {
+            text-decoration: none;
+            color: #F5C518;
+            margin-left: 41px;
+            display: flex;
+            align-self: center;
+        }
+       
+    }
+
+    &-details {
+        margin-top: 32px;
+
+        &-date {
+            color: #F5C518;
+        }
+
+        &-text {
+            margin: 26px 0 75px 0;
+            width: 90%;
+            color: rgba(0, 0, 0, 0.5);
+        }
+    }
+}

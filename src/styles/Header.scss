@@ -1,0 +1,64 @@
+.header {
+    display: grid;
+    grid-template-columns: min-content 1fr 1fr;
+    margin: 36px 0 24px 0;
+
+    @media only screen and (max-width: 415px) {
+        display: block;
+        margin: 25px 50px;
+    }
+
+    .nav {
+        display: grid;
+        align-items: center;
+
+        @media only screen and (max-width: 415px) {
+           margin-top: 15px;
+        }
+    
+
+        &__unordered {
+            list-style: none;
+            display: flex;
+
+            @media only screen and (max-width:415px) {
+                margin: auto;
+                
+            }
+
+            a {
+                text-decoration: none;
+            }
+    
+            &-list-1, 
+            &-list-2 {
+                font-size: 18px;
+                line-height: 27px;
+                }
+            &-list-1 {
+                margin-left: 87px;
+                color: #000;
+                font-weight: 600;
+
+                @media only screen and (max-width:415px) {
+                    margin-left: 0;
+                    
+                }
+            }
+            &-list-2 {
+                margin-left: 50px;
+                color: #F5C518;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.logo-wrapper {
+    display: grid;
+    align-items: center;
+
+    @media only screen and (max-width: 415px) {
+        justify-items: center;
+    }
+}

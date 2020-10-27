@@ -1,0 +1,119 @@
+.section__options {
+    margin-bottom: 100px;
+    position: relative;
+ 
+     &-inline {
+         box-shadow: 0px 16px 28px rgba(141, 40, 173, 0.15);
+         padding: 15px;
+         display: flex;
+         border-radius: 10px;
+         z-index: 10;
+         background-color: #fff;
+         top: -50px;
+         left: 300px;
+
+         @media only screen and (max-width:1025px) {
+            left: 15px;
+        }
+
+
+        @media only screen and (max-width:769px) {
+            left: 0;
+        }
+
+         @media only screen and (max-width:415px) {
+             display: grid;
+             left: 0;
+             position: relative ;
+             top: -10px;
+             padding: 10px 5px;
+         }
+         @media only screen and (max-width:321px) {
+            position: relative;
+         }
+
+       &-inputs {
+           display: flex;
+
+           @media only screen and (max-width:321px) {
+            display: grid;
+            justify-content: center;
+         }
+       }
+     }
+ 
+     &-year,
+     &-type,
+     &-movie {
+         background-color: #F3F3F3;
+         margin: 5px;
+
+     }
+     &-year,
+     &-type,
+     &-btn {
+         border-radius: 8px;
+         border: none;
+         outline: none;
+     }
+     &-year,
+     &-type {
+         padding: 16px 5px;
+         margin-left: 5px;
+
+         @media only screen and (max-width: 769px) {
+            padding: 16px 0;
+            margin-left: 0;
+         }
+         @media only screen and (max-width: 415px) {
+            padding: 16px 7px;
+         }
+        
+
+       
+         
+     }
+ 
+     &-icon,
+     &-icon-search {
+         position: relative;
+         right: 25px;
+ 
+         &-search {
+             right: 35px;
+         }
+
+         @media only screen and (max-width:321px) {
+           display: none;
+        }
+     }
+     &-btn {
+         background-color: #F5C518;
+         color: #fff;
+         padding: 10px 20px;
+         display: flex;
+         font-size: 20px;
+         line-height: 30px;
+         cursor: pointer;
+
+         @media only screen and (max-width:415px) {
+             width: fit-content;
+             margin-top: 20px;
+             justify-self: center;
+         }
+ 
+         &-arrow {
+             margin-left: 30px;
+
+             @media only screen and (max-width: 769px) {
+                margin-left: 5px;
+             }
+         }
+     }
+     input[type="text"],
+     ::placeholder {
+         font-size: 18px;
+         line-height: 27px;
+         color:#636363;
+     }
+ }
