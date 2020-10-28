@@ -22,6 +22,7 @@ function MovieCard({imdbId}) {
   }, [imdbId]);
 
   const addToFavorites = () => {
+    
     dispatch(setFavorites(imdbId)); 
   }
 
@@ -49,7 +50,7 @@ function MovieCard({imdbId}) {
                   <span><img src={fav} alt="favorite icon"/></span>
                   Add to favorites
               </button>
-              <a className="movie__box-btn-link" href="#">View Details</a>
+              <a className="movie__box-btn-link" href="/movie-details">View Details</a>
           </div>
       </div>
     </div>

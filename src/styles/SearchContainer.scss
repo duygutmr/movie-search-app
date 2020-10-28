@@ -1,6 +1,5 @@
 .section__options {
     margin-bottom: 100px;
-    position: relative;
  
      &-inline {
          box-shadow: 0px 16px 28px rgba(141, 40, 173, 0.15);
@@ -10,15 +9,16 @@
          z-index: 10;
          background-color: #fff;
          top: -50px;
-         left: 300px;
+         margin: auto;
+         width: 1000px;
 
-         @media only screen and (max-width:1025px) {
-            left: 15px;
+         @media only screen and (max-width:1024px) {
+            top: -20px;
         }
 
 
         @media only screen and (max-width:769px) {
-            left: 0;
+            max-width: 100%;
         }
 
          @media only screen and (max-width:415px) {
@@ -26,7 +26,7 @@
              left: 0;
              position: relative ;
              top: -10px;
-             padding: 10px 5px;
+
          }
          @media only screen and (max-width:321px) {
             position: relative;
@@ -65,12 +65,6 @@
             padding: 16px 0;
             margin-left: 0;
          }
-         @media only screen and (max-width: 415px) {
-            padding: 16px 7px;
-         }
-        
-
-       
          
      }
  
@@ -90,7 +84,7 @@
      &-btn {
          background-color: #F5C518;
          color: #fff;
-         padding: 10px 20px;
+         padding: 10px 15px;
          display: flex;
          font-size: 20px;
          line-height: 30px;
@@ -115,5 +109,9 @@
          font-size: 18px;
          line-height: 27px;
          color:#636363;
+
+         @media only screen and (max-width: 416px) {
+            font-size: 14px;
+         }
      }
  }

@@ -3,7 +3,6 @@
 
     &__box {
         display: grid;
-        grid-template-columns: 330px;
         margin-top: 55px;
 
         @media only screen and (max-width:415px) {
@@ -27,6 +26,7 @@
         right: 0;
         bottom: -20px;
         cursor: pointer;
+        z-index: 30;
     }
     
 

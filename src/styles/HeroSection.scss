@@ -10,11 +10,15 @@
     }
 
     &__content {
-        padding: 150px 100px;
+        padding: 150px;
         margin-left: 50px;
         position: relative;
 
-        @media only screen and (max-width: 415px) {
+        @media only screen and (max-width: 1024px) {
+            padding: 80px;   
+        }
+
+        @media only screen and (max-width: 769px) {
             padding: 40px;   
         }
 
@@ -29,7 +33,11 @@
         line-height: 84px;
         color: #fff;
 
-        @media only screen and (max-width: 415px) {
+        @media only screen and (max-width: 1024px) {
+            font-size: 44px;
+            line-height: 50px;  
+        }
+        @media only screen and (max-width: 416px) {
             font-size: 35px;
             line-height: 40px;  
         }
@@ -48,8 +56,9 @@
         color: #fff;
         margin-top: 30px;
 
-        @media only screen and (max-width: 415px) {
+        @media only screen and (max-width: 769px) {
             margin-top: 15px;  
+            font-size: 14px;
         }
     }
     

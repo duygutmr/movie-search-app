@@ -13,7 +13,7 @@ export const addToFavorites = ( state = favoritesInitialState , { type, payload 
             let favorites = state.favorites.slice();
 
             if(idAlreadyExists) {
-                favorites = favorites.filter(id => id != payload);                
+                favorites = favorites.filter(id => id !== payload);                
             }     
             else {
                 // modify the COPY, not the original

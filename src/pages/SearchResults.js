@@ -7,7 +7,7 @@ import '../styles/SearchResults.scss'
 
 function SearchResults() {
   const movies = useSelector(state => state.getMovieReducer.movies)
-  const searchContainerInlineStyle = { position: 'absolute', top: '30px'}
+  const searchContainerInlineStyle = { position: 'relative', top: '30px'}
   
   return (
     <Fragment>

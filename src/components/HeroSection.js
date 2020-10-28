@@ -14,7 +14,7 @@ function HeroSection() {
   return (
     <section className="hero-section">
         <div className="hero-section__content">
-          <img className="hero-section__content-icon" src={Circle} />
+          <img className="hero-section__content-icon" src={Circle} alt="hero section icon"/>
             <h1 className="hero-section__content-title">Welcome to</h1>
             <h1 className="hero-section__content-title-movie">MovieUP</h1>
             <p className="hero-section__content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
