@@ -16,7 +16,7 @@ function MovieCard({ imdbId }) {
 
     useEffect(() => {
         const loadData = async () => {
-            const URL = `http://www.omdbapi.com?apikey=ad838839&i=${imdbId}&plot=short`
+            const URL = `https://www.omdbapi.com?apikey=ad838839&i=${imdbId}&plot=short`
             const response = await fetch(URL);
             const data = await response.json();
             const { Title, Genre, imdbRating, Poster, Year, Plot } = data;
