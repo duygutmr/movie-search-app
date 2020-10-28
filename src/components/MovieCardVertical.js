@@ -3,15 +3,14 @@ import '../styles/MovieCardVertical.scss'
 import imdb from '../svg/imdb.svg'
 import favRound from '../svg/fav-round.svg'
 import favRoundFull from '../svg/fav-round-full.svg'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setFavorites } from '../store/actions'
-import { getInLocal} from '../utils/localStorage'
 import {useHistory} from "react-router-dom";
 
 function MovieCard({ imdbId }) {
     const [movie, setMovie] = useState({ Title: '', Genre: '', imdbRating: '', Poster: '', Year: '', Plot: '' })
     const dispatch = useDispatch();
-    const imdbIds = getInLocal("imdbIds");
+    const imdbIds = useSelector(state => state.addToFavorites.favorites)
     let history = useHistory();
 
     useEffect(() => {

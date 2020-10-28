@@ -29,7 +29,8 @@ function SearchContainer({style}) {
                 <img className="section__options-icon" src={arrow} alt="arrow icon"/>
             </div>
             <SearchBox callSearchFunction={callSearchFunction} />
-            <button onClick={callSearchFunction} className="section__options-btn">Search
+            <button onClick={callSearchFunction} className="section__options-btn">
+                <span>Search</span>
                 <img className="section__options-btn-arrow" src={arrowRight} alt="right arrow icon"/>
             </button>
         </div>
