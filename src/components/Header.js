@@ -1,11 +1,24 @@
 import React from 'react';
 import '../styles/Header.scss';
 import { NavLink } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { searchMovies } from '../store/actions' 
 
 import SearchBox from './SearchBox'
 import logo from '../svg/logo.svg'
 
 function Header() {
+  const dispatch = useDispatch();
+  const searchValue = useSelector(state => state.searchMovies.searchField)
+  let history = useHistory();
+
+  const callSearchFunction = (e) => {
+    e.preventDefault();
+    dispatch(searchMovies(searchValue));
+    history.push("/search-results");
+  }
+
   return (
     <div className="container">
       <header className="header">
@@ -22,7 +35,7 @@ function Header() {
             </NavLink>
           </ul>
         </nav>
-        <SearchBox />
+        <SearchBox callSearchFunction={callSearchFunction}/>
       </header>
     </div>
 

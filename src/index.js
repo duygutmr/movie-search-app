@@ -6,9 +6,9 @@ import thunkMiddleWare from 'redux-thunk';
 import { BrowserRouter } from "react-router-dom";
 import './styles/base.scss';
 import App from './App';
-import { getMovieReducer, addToFavorites } from './store/reducers';
+import { getMovieReducer, addToFavorites, searchMovies } from './store/reducers';
 
-const rootReducer = combineReducers({ getMovieReducer, addToFavorites });
+const rootReducer = combineReducers({ getMovieReducer, addToFavorites, searchMovies });
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleWare));
 window.store = store;
 

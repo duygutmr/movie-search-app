@@ -1,5 +1,20 @@
-import { FETCH_MOVIES_PENDING, FETCH_MOVIES_SUCCESS, FETCH_MOVIES_ERROR, ADD_TO_FAVORITES } from '../store/actions'
+import { FETCH_MOVIES_PENDING, FETCH_MOVIES_SUCCESS, FETCH_MOVIES_ERROR, ADD_TO_FAVORITES, CHANGE_SEARCH_FIELD } from '../store/actions'
 import {setInLocal} from '../utils/localStorage'
+
+const initialState = {
+    searchField: '',
+}
+
+export const searchMovies = ( state = initialState , { type, payload } ) => {
+    switch(type) {
+        case CHANGE_SEARCH_FIELD:
+            return { ...state, 
+                searchField: payload 
+            }
+        default: 
+            return state;
+    }
+}
 
 const favoritesInitialState = {
     favorites: []

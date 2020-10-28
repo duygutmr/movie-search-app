@@ -1,29 +1,21 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
-import { useDispatch } from 'react-redux';
-import { searchMovies } from '../store/actions' 
+import React from "react";
 import search from '../svg/search.svg'
+import { useSelector, useDispatch } from 'react-redux';
+import { setSearchField } from '../store/actions' 
 import '../styles/SearchBox.scss'
 
-const SearchBox = () => {
-  const [searchValue, setSearchValue] = useState("");
+const SearchBox = ({callSearchFunction}) => {
+  const searchValue = useSelector(state => state.searchMovies.searchField)
   const dispatch = useDispatch();
-  let history = useHistory();
 
   const handleSearchInputChanges = (e) => {
-    setSearchValue(e.target.value);
-  }
-
-  const callSearchFunction = (e) => {
-    e.preventDefault();
-    dispatch(searchMovies(searchValue));
-    history.push("/search-results");
+    dispatch(setSearchField(e.target.value));
   }
 
   return (
       <div className="search_box">
         <input value={searchValue} onChange={handleSearchInputChanges} className="search_box-input" type="text" placeholder="Enter movie name here"/>
-        <img onClick={callSearchFunction} className="search_box-icon" src={search} alt="search"/>
+        <img onClick={(e) => callSearchFunction(e)} className="search_box-icon" src={search} alt="search"/>
       </div>
     );
 }
