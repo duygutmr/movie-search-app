@@ -32,7 +32,7 @@ function MovieCard({ imdbId }) {
     }
 
     const isFavorited = () => {
-        return imdbIds.includes(imdbId);
+        return imdbIds && imdbIds.includes(imdbId);
     }
 
     const goToDetails = () => {
